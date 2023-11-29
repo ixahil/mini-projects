@@ -1,6 +1,10 @@
 import GameState from "./GameState";
 
-function GameOver({ gameState }) {
+type Props = {
+  gameState: Number;
+};
+
+function GameOver({ gameState }: Props) {
   switch (gameState) {
     case GameState.inProgress:
       return <></>;

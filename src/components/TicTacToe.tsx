@@ -3,20 +3,23 @@ import Board from "./Board";
 import GameOver from "./GamOver";
 import GameState from "./GameState";
 import Reset from "./Reset";
-import gameOverSoundAsset from "../sounds/gameover.Wav";
-import clickSoundAsset from "../sounds/click.Wav";
 
-type Props = {};
+import gameOverSoundAsset from "../sounds/gameover.wav";
+import clickSoundAsset from "../sounds/click.wav";
 
-const gameOverSound = new Audio(gameOverSoundAsset);
+type ClickSoundType = HTMLAudioElement;
+type GameOverSoundType = HTMLAudioElement;
+
+const gameOverSound: GameOverSoundType = new Audio(gameOverSoundAsset);
 gameOverSound.volume = 0.2;
-const clickSound = new Audio(clickSoundAsset);
+
+const clickSound: ClickSoundType = new Audio(clickSoundAsset);
 clickSound.volume = 0.5;
 
 const PLAYER_X = "x";
 const PLAYER_O = "o";
 
-const TicTacToe = (props: Props) => {
+const TicTacToe = () => {
   const [tiles, setTiles] = useState(Array(9).fill(null));
   const [playerTurn, setPlayerTurn] = useState(PLAYER_X);
   const [strikeClass, setStrikeClass] = useState("");
@@ -56,7 +59,7 @@ const TicTacToe = (props: Props) => {
       }
     }
 
-    const areAllTilesFilledIn = tiles.every((tile) => tile !== null);
+    const areAllTilesFilledIn = tiles.every((tile: any) => tile !== null);
     if (areAllTilesFilledIn) setGameState(GameState.draw);
   };
 
@@ -89,7 +92,7 @@ const TicTacToe = (props: Props) => {
     setGameState(GameState.inProgress);
     setTiles(Array(9).fill(null));
     setPlayerTurn(PLAYER_X);
-    setStrikeClass(null);
+    setStrikeClass("");
   };
 
   return (
