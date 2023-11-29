@@ -106,7 +106,7 @@ const TicTacToe = () => {
       />
       <GameOver gameState={gameState} />
       <Reset gameState={gameState} onReset={handleReset} />
-      <p className="footer">Developed with &lt;3 by Sahil</p>
+      <p className="footer">Developed with &lt;3 by SahilDev | www.sahildev.pro</p>
     </>
   );
 };
