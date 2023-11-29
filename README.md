@@ -1,6 +1,6 @@
 # TicTacToe Game built with React using Vite
 
-Live Demo: [Demo](https://mini-project1.sahildev.pro)
+Live Demo: [Demo](https://tictactoe.sahildev.pro)
 
 ## Run Local
 
