@@ -4,8 +4,8 @@ import GameOver from "./GamOver";
 import GameState from "./GameState";
 import Reset from "./Reset";
 
-import gameOverSoundAsset from "../sounds/gameover.wav";
-import clickSoundAsset from "../sounds/click.wav";
+import gameOverSoundAsset from "../assets/sounds/gameover.wav";
+import clickSoundAsset from "../assets/sounds/click.wav";
 
 type ClickSoundType = HTMLAudioElement;
 type GameOverSoundType = HTMLAudioElement;
